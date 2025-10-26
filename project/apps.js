@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         user = JSON.parse(localStorage.getItem('SIPCreds')) || {
             User: 'webrtc_client',
             Pass: 'webrtc_client',
-            WSServer: 'wss://ivi.io.vn:8089/ws',
+            WSServer: 'wss://ivi.io.vn:18089/ws',
             Display: 'webrtc_client',
             Realm: 'ivi.io.vn',
             callDestination: 'sip:842888883968@ivi.io.vn'
