@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Khởi tạo SIPCreds
     if (typeof user === 'undefined') {
         user = JSON.parse(localStorage.getItem('SIPCreds')) || {
-            User: 'webrtc_client',
-            Pass: 'webrtc_client',
+            User: 'customer-001',
+            Pass: 'customer-001',
             WSServer: 'wss://ivi.io.vn:18089/ws',
             Display: 'webrtc_client',
             Realm: 'ivi.io.vn',
-            callDestination: 'sip:842888883968@ivi.io.vn'
+            callDestination: 'sip:02873006666@ivi.io.vn'
         };
         localStorage.setItem('SIPCreds', JSON.stringify(user));
     }
