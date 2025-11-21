@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Cuộc Gọi WebRTC</title>
+    <link rel="icon" href="data:,">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="project/style.css">
+</head>
+<body>
+    <div id="callContainer">
+        <div id="callHeader">
+            <div id="signalIcon"><i class="fas fa-signal"></i></div>
+            <div id="currentTime">00:00</div>
+        </div>
+        <div id="callInfo">
+            <div id="callStatus">Đang tải...</div>
+            <div id="callTimer">00:00</div>
+            <div id="keypad">
+                <button onclick="sendDTMF('1')">1</button>
+                <button onclick="sendDTMF('2')">2</button>
+                <button onclick="sendDTMF('3')">3</button>
+                <button onclick="sendDTMF('4')">4</button>
+                <button onclick="sendDTMF('5')">5</button>
+                <button onclick="sendDTMF('6')">6</button>
+                <button onclick="sendDTMF('7')">7</button>
+                <button onclick="sendDTMF('8')">8</button>
+                <button onclick="sendDTMF('9')">9</button>
+                <button onclick="sendDTMF('*')">*</button>
+                <button onclick="sendDTMF('0')">0</button>
+                <button onclick="sendDTMF('#')">#</button>
+            </div>
+        </div>
+        <div id="callControls">
+            <button id="muteButton" title="Tắt tiếng" onclick="toggleMute()">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button id="hangupButton" title="Kết thúc" onclick="endCall()">
+                <i class="fas fa-phone-slash"></i>
+            </button>
+            <button id="keypadButton" title="Bàn phím" onclick="toggleKeypad()">
+                <i class="fas fa-keyboard"></i>
+            </button>
+        </div>
+    </div>
+
+    <audio id="ringtone" preload="auto" src="audio/outgoing.mp3"></audio>
+    <audio id="ringbacktone" preload="auto" src="audio/outgoing.mp3"></audio>
+    <audio id="dtmfTone" preload="auto" src="audio/dtmf.mp3"></audio>
+    <audio id="audioRemote"></audio>
+    <script src="sipjs/sip-0.10.0.min.js"></script>
+    <script src="project/apps.js"></script>
+</body>
+</html>
