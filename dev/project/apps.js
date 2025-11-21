@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             User: 'customer-001',
             Pass: 'customer-001',
             WSServer: 'wss://ivi.io.vn:18089/ws',
-            Display: 'webrtc_client',
+            Display: '0909123123',
             Realm: 'ivi.io.vn',
             callDestination: 'sip:02873006666@ivi.io.vn'
         };
